@@ -1,0 +1,523 @@
+{
+	"info": {
+		"_postman_id": "45822a83-e65f-47a5-b095-5eea02661378",
+		"name": "demoShop Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"fdfsdfdsffdfsdfdsf\",\r\n    \"password\": \"19072001\",\r\n    \"phone\": \"099546556\",\r\n    \"email\" : \"congson190ff7@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"congson1907vn@gmail.com\",\r\n    \"password\": \"19072001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjA0MTUzNjAsImV4cCI6MTYyMDQxODk2MH0.Houe_8GalpQThJfSGZ4Lo9hbKV8PWuJgjXARIzwnHLk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxNDQwOTksImV4cCI6MTYyMDE0NzY5OX0.JeLuAcRb15oj3vy-ejy7Ct7-BPxFjSg0Fq-Bz6ImCU4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Category/GetAllCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Category",
+						"GetAllCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Product/GetAllProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Product",
+						"GetAllProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewProductDetail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjA1NDgwMDIsImV4cCI6MTYyMDU1MTYwMn0.6GqqWxbHD4FitcEz_osHciBa8dwQDPbQ4jxWtx01Ub8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Api/product/ViewProductDetail?productId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"product",
+						"ViewProductDetail"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjA1NDgwMDIsImV4cCI6MTYyMDU1MTYwMn0.6GqqWxbHD4FitcEz_osHciBa8dwQDPbQ4jxWtx01Ub8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Api/Product/SearchProduct/?productName=Nike Jordan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Product",
+						"SearchProduct",
+						""
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "Nike Jordan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order(click on add to cart)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1,\r\n    \"quantity\" : 1,\r\n    \"productSize\" : 39,\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/OrderDetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"OrderDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordered (chốt đơn)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\" : \"congson1907admin_1620103003\",\r\n    \"expireDate\" : \"04/05/2021\",\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Ordered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Ordered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category(admin)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\" :\"giày loliloli\",\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Category/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Category",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product (admin)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\" : \"Nike\",\r\n    \"productName\" : \"Nike Jordan 1 High vcl (Xám)\",\r\n    \"description\" : \"giày này đi high lắm mọi người ơi\\n Size : 40-42\",\r\n    \"productPrice\" : 9999000,\r\n    \"imageUrl\" : \"http://product.hstatic.net/1000282067/product/497870_01.jpg_3121b7d4a0104a5eb801257d4e0f5f06_grande.jpeg\",\r\n    \"categoryName\" : \"Giày thể thao\",\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxNDQwOTksImV4cCI6MTYyMDE0NzY5OX0.JeLuAcRb15oj3vy-ejy7Ct7-BPxFjSg0Fq-Bz6ImCU4\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Product/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Product",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory(admin)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryId\" : 10,\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/Category/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"Category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/order/viewOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"order",
+						"viewOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delivered to finished",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\" : \"congson1907admin_1620042007\",\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2MjAxMzkzOTMsImV4cCI6MTYyMDE0Mjk5M30.4oZYvgUi1DBa8DN5WU6kEAOKd5SnMThHB_AAC8vNeRM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Api/order/viewOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"order",
+						"viewOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFkZHJlc3MiOiIifSwiaWF0IjoxNjIwNTUyMDgyLCJleHAiOjE2MjA1NTU2ODJ9.URzdJJafcF0C5AqTaL6xLHWx9JyOJwGKQkwMbllI9D0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiSWQiOjEsInVzZXJOYW1lIjoiY29uZ3NvbjE5MDdhZG1pbiIsInBob25lIjoiMDk0ODY1NDY2IiwiZW1haWwiOiJjb25nc29uMTkwN3ZuQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFkZHJlc3MiOiIifSwiaWF0IjoxNjIwNTUyMDgyLCJleHAiOjE2MjA1NTU2ODJ9.URzdJJafcF0C5AqTaL6xLHWx9JyOJwGKQkwMbllI9D0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
